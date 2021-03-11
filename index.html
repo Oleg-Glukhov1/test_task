@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестовое</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="canvas">
+        <div class="canvas__text">
+            <p class="canvas__text_number">72.<div class="canvas__text_block">
+                <p class="canvas__text_percent">%</p>
+              <p class="canvas__text_remains">7</p></div></p>
+              <div class="canvas__description">
+                <h3 class="canvas__description_title">Лояльность</h3>
+                <p class="canvas__description_subtitle">ниже среднего</p>
+                <p  class="canvas__description_info">по отрасли: FMCG значение слева от медианы 52% - 83.1%</p>
+              </div>
+              <div class="canvas__index">
+                  <div class="canvas__index_triangle"></div>
+                  <p class="canvas__index_number">3.1</p>
+              </div>
+        </div>
+        <img class="canvas__img" src="./loyalty.svg">
+      <svg class="chart" width="500" max-height="500" viewBox="0 0 50 50">
+        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+        <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+      </svg>
+    </div>
+    <div class="items">
+        <div class="item">
+            <h3 class="item__title">Промоутеры</h3>
+            <div class="item__group">
+                <div class="item__quantity">
+                    <div class="item__quantity_cell">
+                        <p class="item__quantity_percent">32.0%</p>
+                        <div class="item__quantity_line">
+                            <p class="item__quantity_number">81</p>
+                            <img src="./human_full.svg" class="item__quantity_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="item__block">
+                    <div class="item__block_two"></div>
+                    <p class="item__block_index">+1.2%</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="item">
+            <h3 class="item__title">Скептики</h3>
+            <div class="item__group">
+            <div class="item__quantity">
+                <div class="item__quantity_cell">
+                    <p class="item__quantity_percent">39.1%</p>
+                    <div class="item__quantity_line">
+                        <p class="item__quantity_number">8</p>
+                        <img src="./human_full.svg" class="item__quantity_img">
+                    </div>
+                </div>
+            </div>
+            <div class="item__block light-yellow">
+                <div class="item__block_two yellow"></div>
+                <p class="item__block_index">+4.8%</p>
+            </div>
+        </div>
+        </div>
+        <div class="item">
+            <h3 class="item__title">Критики</h3>
+            <div class="item__group">
+            <div class="item__quantity">
+                <div class="item__quantity_cell">
+                    <p class="item__quantity_percent">79.8%</p>
+                    <div class="item__quantity_line">
+                        <p class="item__quantity_number">7</p>
+                        <img src="./human_full.svg" class="item__quantity_img">
+                    </div>
+                </div>
+            </div>
+            <div class="item__block light-red">
+                <div class="item__block_two red"></div>
+                <p class="item__block_index">-9.7%</p>
+            </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

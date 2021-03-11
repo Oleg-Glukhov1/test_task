@@ -1,0 +1,262 @@
+@keyframes render {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.chart {
+  min-width: 300px;
+}
+
+.unit {
+  fill: none;
+  stroke-width: 1;
+  cursor: pointer;
+
+  animation-name: render;
+  animation-duration: 1.5s;
+  transition-property: all;
+  transition-duration: 0.4s;
+}
+
+.unit:hover,
+.hovered {
+  opacity: 0.8;
+  stroke-width: 2;
+}
+
+.unit:nth-child(1) {
+  stroke: #fcd329;
+  stroke-dasharray: 35.19 64.81;
+  stroke-dashoffset: 20;
+}
+
+.unit:nth-child(2) {
+  stroke: #70a84a;
+  stroke-dasharray: 28.8 71.2;
+  stroke-dashoffset: -15;
+}
+
+.unit:nth-child(3) {
+  stroke: #ececec;
+  stroke-dasharray: 26.01 73.99;
+  stroke-dashoffset: -43.8;
+}
+
+.canvas__text {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  max-width: 190px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.canvas__text_number {
+  font-size: 60px;
+  margin: 0;
+  font-family: Arial, Gotham Pro;
+}
+.canvas_text_block {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.canvas__text_percent {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+  font-family: Arial, Gotham Pro;
+}
+.canvas__text_remains {
+  margin: 0;
+  font-size: 30px;
+  font-family: Arial, Gotham Pro;
+  line-height: 1;
+}
+/* .canvas__description {
+} */
+.canvas__description_title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, Gotham Pro;
+}
+.canvas__description_subtitle {
+  color: #fbd229;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, Gotham Pro;
+}
+.canvas__description_info {
+  font-size: 16px;
+  text-align: center;
+  color: #b7b2b9;
+  font-family: Arial, Gotham Pro;
+}
+.canvas__index {
+  display: flex;
+  align-items: flex-start;
+}
+.canvas__index_triangle {
+  border: 10px solid transparent;
+  border-bottom: 10px solid #70a84a;
+  margin-right: 5px;
+}
+.canvas__index_number {
+  margin: 0;
+  font-size: 22px;
+  color: #70a84a;
+  font-family: Arial, Gotham Pro;
+}
+.canvas__img {
+  position: absolute;
+  top: 70px;
+}
+.items {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+.item__title {
+  margin: 0 10px 0 0;
+  font-size: 20px;
+  color: #555555;
+  font-family: Arial, Gotham Pro;
+}
+.item__group {
+  display: flex;
+}
+.item__quantity {
+  margin: 5px 10px 0 0;
+}
+.item__quantity_cell {
+  align-items: center;
+}
+.item__quantity_number {
+  margin: 0 3px 0 0;
+  color: #bcbcbb;
+}
+.item__quantity_percent {
+  margin: 0;
+  font-weight: bold;
+  color: #555555;
+}
+.item__quantity_img {
+  max-width: 15px;
+}
+.item__quantity_line {
+  display: flex;
+  justify-content: center;
+}
+.item__block {
+  margin-top: 5px;
+  display: flex;
+  width: 100px;
+  height: 35px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    #b4d0a2 0%,
+    #b4d0a2 30%,
+    #f9f9f9 30%,
+    #f9f9f9 100%
+  );
+}
+.item__block_two {
+  width: 32px;
+  height: 28px;
+  background-color: #70a74b;
+  margin: 0;
+}
+.item__block_index {
+  display: flex;
+  margin: 0 3px 0 20px;
+  align-items: center;
+  font-size: 16px;
+  font-family: Arial, Gotham Pro;
+}
+.yellow {
+  background-color: #fbd229;
+}
+.light-yellow {
+  background: linear-gradient(
+    to right,
+    #fae690 0%,
+    #fae690 30%,
+    #f9f9f9 30%,
+    #f9f9f9 100%
+  );
+}
+.red {
+  background-color: #ed5343;
+}
+.light-red {
+  background: linear-gradient(
+    to right,
+    #f3a69e 0%,
+    #f3a69e 30%,
+    #f9f9f9 30%,
+    #f9f9f9 100%
+  );
+}
+
+@media screen and (max-width: 450px) {
+  .canvas__text {
+    max-width: 140px;
+  }
+  .canvas__img {
+    top: 90px;
+  }
+  .canvas__text_number {
+    font-size: 40px;
+  }
+  .canvas__text_remains {
+    font-size: 18px;
+  }
+  .canvas__text_percent {
+    font-size: 12px;
+  }
+  .canvas__description_title {
+    font-size: 18px;
+  }
+  .canvas__description_subtitle {
+    font-size: 14px;
+  }
+  .canvas__description_info {
+    font-size: 12px;
+  }
+  .canvas__index_number {
+    font-size: 18px;
+  }
+  .canvas__index_triangle {
+    border: 8px solid transparent;
+    border-bottom: 8px solid #70a84a;
+    margin-right: 5px;
+  }
+}
