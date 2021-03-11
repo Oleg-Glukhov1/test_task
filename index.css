@@ -126,7 +126,7 @@ body {
 }
 .canvas__img {
   position: absolute;
-  top: 70px;
+  top: 65px;
 }
 .items {
   display: flex;
@@ -231,7 +231,7 @@ body {
     max-width: 140px;
   }
   .canvas__img {
-    top: 90px;
+    top: 40px;
   }
   .canvas__text_number {
     font-size: 40px;
@@ -258,5 +258,23 @@ body {
     border: 8px solid transparent;
     border-bottom: 8px solid #70a84a;
     margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .canvas__img {
+    top: 50px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 420px) { 
+  .canvas__img {
+    width: 30px;
+  }
+}
+@media screen and (max-width: 360px) { 
+  .canvas__img {
+    top: 30px;
   }
 }
